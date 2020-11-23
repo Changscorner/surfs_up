@@ -29,8 +29,8 @@ There are additional queries that we can make to further assist in assessing if 
 1.) Total Precipitation Measurement
 	The code that would be used should look like this:
  
-	```
+	
 	session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
 	
 	session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()
-	```
+	
