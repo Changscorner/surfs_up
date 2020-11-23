@@ -19,5 +19,18 @@ Analysis of the temperature in Hawaii from the months of June to December in ord
 
 The difference in standard deviation from close to the peak during summer and the cold months during the winter is not as large as one would think. 
 With the STD being around only 0.75 between the two months and the max temperature having a difference of only 2 degrees F.
+
 With this information we can make a reasonable conclusion that an ice cream and surf business would definitely be viable year round in Hawaii. 
  
+#### Additional Queries
+
+There are additional queries that we can make to further assist in assessing if this type of business would be viable.
+
+1.) Total Precipitation Measurement
+	The code that would be used should look like this:
+ 
+	```
+	session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
+	
+	session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()
+	```
