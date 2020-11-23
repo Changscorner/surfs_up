@@ -17,5 +17,7 @@ Analysis of the temperature in Hawaii from the months of June to December in ord
 
 ### Summary
 
-Taking into account the temperatures seen above an ice cream and surf business would definitely be viable year round in Hawaii. 
-
+The difference in standard deviation from close to the peak during summer and the cold months during the winter is not as large as one would think. 
+With the STD being around only 0.75 between the two months and the max temperature having a difference of only 2 degrees F.
+With this information we can make a reasonable conclusion that an ice cream and surf business would definitely be viable year round in Hawaii. 
+ 
