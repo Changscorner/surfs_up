@@ -23,14 +23,24 @@ With the STD being around only 0.75 between the two months and the max temperatu
 With this information we can make a reasonable conclusion that an ice cream and surf business would definitely be viable year round in Hawaii. 
  
 #### Additional Queries
-
 There are additional queries that we can make to further assist in assessing if this type of business would be viable.
 
-1.) Total Precipitation Measurement
+1.) Most Active Stations in June and December
+
+	The code should look like this:
+	
+	session.query(Measurement.prcp).filter(Measurement.station == 'USC00519281').filter(extract('month', Measurement.date) == 6).all()
+	
+	session.query(Measurement.prcp).filter(Measurement.station == 'USC00519281').filter(extract('month', Measurement.date) == 12).all()
+
+This code will take a look at the most active weather measuring stations and look at the precipitation amounts at those stations.
+
+2.) Total Precipitation Measurement
+
 	The code that would be used should look like this:
- 
 	
 	session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
 	
 	session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()
 	
+This should assist in seeing how much rain the months June and December receive.
